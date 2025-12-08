@@ -2,11 +2,14 @@
 
 @import '@fontsource-variable/roboto';
 
+@plugin 'tailwindcss-motion';
+
 body {
   font-family: 'Roboto Variable', sans-serif;
 }
 
 @theme {
+  --breakpoint-sm : 320px;
   --breakpoint-md : 375px;
   --breakpoint-tablet: 768px;
   --breakpoint-lg : 1440px;
@@ -36,6 +39,21 @@ body {
     transform: scale(0);
     opacity: 0;
   }
+}
+
+@keyframes drop-down {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to{
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.animate-drop-down {
+  animation: drop-down 0.1s ease-in
 }
 
 .animate-pop-over {
