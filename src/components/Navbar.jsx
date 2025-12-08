@@ -26,7 +26,7 @@ const Navbar = ({ isDarkMode, lightMode, darkMode }) => {
   return (
     <>
       {dropDownMenu ? (
-        <div className="bg-blue-400 absolute w-full z-10  items-center animate-drop-down">
+        <div className="bg-blue-400 absolute w-full z-50  items-center animate-drop-down">
           <div className="mt-5 flex flex-col gap-5 items-center p-5">
             <a>Home</a>
             <a>Projects</a>
@@ -34,8 +34,8 @@ const Navbar = ({ isDarkMode, lightMode, darkMode }) => {
           </div>
         </div>
       ) : null}
-      <div className="flex justify-center relative ">
-        <div className="bg-white dark:bg-dark-mode dark:text-white border fixed p-4 flex justify-between container max-w-4xl">
+      <div className="flex justify-center relative w-screen ">
+        <div className="bg-white dark:bg-dark-mode dark:text-white fixed p-4 flex justify-between z-10 container max-w-4xl">
           <div className="flex gap-5 items-center">
             <h1 className="text-2xl font-bold">Logo</h1>
             <ul className="ml-8 items-center gap-5 md:hidden sm:hidden tablet:inline-flex">
@@ -46,7 +46,7 @@ const Navbar = ({ isDarkMode, lightMode, darkMode }) => {
           </div>
           <div className="flex gap-2" ref={themeMenuRef}>
             <button
-              className="border p-2 rounded-lg relative"
+              className="border bg-white dark:bg-[#131316] dark:border-gray-800 border-gray-400 shadow-inner  p-2 rounded-lg relative"
               onClick={() => setIsClicked(!isClicked)}
             >
               {isDarkMode ? (
@@ -57,7 +57,7 @@ const Navbar = ({ isDarkMode, lightMode, darkMode }) => {
             </button>
             {/* Drop down theme */}
             {isClicked ? (
-              <div className="absolute translate-y-10 -translate-x-23 bg w-[120px] p-2.5 border bg-white dark:bg-dark-mode rounded-xl motion-preset-fade ">
+              <div className="absolute translate-y-10 -translate-x-23 bg w-[120px] p-2.5 border border-gray-300 shadow-lg bg-white dark:bg-dark-mode rounded-xl motion-preset-fade ">
                 <button className="w-24 text-left" onClick={lightMode}>
                   Light
                 </button>

@@ -14,7 +14,11 @@ body {
   --breakpoint-tablet: 768px;
   --breakpoint-lg : 1440px;
 
-  --color-dark-mode:#131316;
+  
+
+  --color-dark-mode:#000000;
+  --color-gradient-1:linear-gradient(180deg,rgba(31, 120, 209, 1) 0%, rgba(100, 98, 150, 1) 100%);
+
 
 }
 
