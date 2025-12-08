@@ -16,7 +16,7 @@ const Hero = ({ theme }) => {
       <div className=" max-w-4xl w-full tablet:h-[400px] flex flex-wrap gap-2 md:gap-6 relative z-10 p-5">
         <div className=" flex justify-center tablet:items-center w-full gap-8 sm:flex-col tablet:flex-row ">
           <img
-            src={theme ? darkAvatar : lightAvatar}
+            src={theme === "light" ? darkAvatar : lightAvatar}
             alt=""
             className="md:w-35 tablet:w-40"
           />
@@ -45,12 +45,12 @@ const Hero = ({ theme }) => {
             blending clean <strong>design </strong> with solid functionality.
           </p>
           <div className="flex gap-5 md:flex-col tablet:flex-row">
-            <div className="flex gap-2 dark:text-black">
-              <button className="cursor-pointer border flex items-center justify-center gap-2 border-gray-200 shadow-lg p-2 bg-white w-35 rounded-lg">
+            <div className="flex gap-2 ">
+              <button className="cursor-pointer border flex items-center justify-center gap-2 border-gray-200 dark:border-gray-700 shadow-lg p-2 bg-white dark:bg-dark-mode hover:bg-gray-100 dark:hover:bg-gray-950 duration-100 w-35 rounded-lg">
                 <MdAlternateEmail />
                 Contact
               </button>
-              <button className="cursor-pointer border flex items-center justify-center gap-2 border-gray-200 p-2 shadow-md bg-white w-35 rounded-lg">
+              <button className="cursor-pointer border flex items-center justify-center gap-2 border-gray-200 dark:border-gray-700 duration-100 p-2 shadow-md bg-white hover:bg-gray-100 dark:hover:bg-gray-950 w-35 rounded-lg">
                 <GrProjects />
                 Projects
               </button>

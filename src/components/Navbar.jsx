@@ -57,14 +57,22 @@ const Navbar = ({ isDarkMode, lightMode, darkMode }) => {
             </button>
             {/* Drop down theme */}
             {isClicked ? (
-              <div className="absolute translate-y-10 -translate-x-23 bg w-[120px] p-2.5 border border-gray-300 shadow-lg bg-white dark:bg-dark-mode rounded-xl motion-preset-fade ">
-                <button className="w-24 text-left" onClick={lightMode}>
+              <div className="absolute translate-y-10 -translate-x-23 bg w-[120px] p-1 border border-gray-300 shadow-lg bg-white dark:bg-[#131316] dark:border-gray-800 rounded-xl motion-preset-fade ">
+                <button
+                  className="w-full text-left hover:bg-gray-100 dark:hover:bg-gray-800 p-1 rounded-md"
+                  onClick={lightMode}
+                >
                   Light
                 </button>
-                <button className="w-24 text-left" onClick={darkMode}>
+                <button
+                  className="w-full text-left hover:bg-gray-100 dark:hover:bg-gray-800 p-1 rounded-md"
+                  onClick={darkMode}
+                >
                   Dark
                 </button>
-                <button className="w-24 text-left">System</button>
+                <button className="w-full text-left hover:bg-gray-100 dark:hover:bg-gray-800 p-1 rounded-md">
+                  System
+                </button>
               </div>
             ) : null}
 
