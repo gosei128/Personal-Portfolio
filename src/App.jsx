@@ -22,6 +22,7 @@ function App() {
         <Navbar
           lightMode={handleLightMode}
           darkMode={handleDarkMode}
+          theme={theme}
           // isDarkMode={isDarkMode}
         />
         <div className="w-full flex flex-col ">

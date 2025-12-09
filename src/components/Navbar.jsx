@@ -3,7 +3,7 @@ import { MdOutlineLightMode } from "react-icons/md";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { useEffect, useRef, useState } from "react";
 
-const Navbar = ({ isDarkMode, lightMode, darkMode }) => {
+const Navbar = ({ theme, lightMode, darkMode }) => {
   const [isClicked, setIsClicked] = useState(false);
   const [dropDownMenu, setDropDownMenu] = useState(false);
   const themeMenuRef = useRef(null);
@@ -49,7 +49,7 @@ const Navbar = ({ isDarkMode, lightMode, darkMode }) => {
               className="border bg-white dark:bg-[#131316] dark:border-gray-800 border-gray-400 shadow-inner  p-2 rounded-lg relative"
               onClick={() => setIsClicked(!isClicked)}
             >
-              {isDarkMode ? (
+              {theme === "light" ? (
                 <MdOutlineDarkMode size={20} />
               ) : (
                 <MdOutlineLightMode size={20} />

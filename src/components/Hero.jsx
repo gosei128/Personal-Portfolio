@@ -8,7 +8,7 @@ import { FaLinkedin } from "react-icons/fa";
 
 const Hero = ({ theme }) => {
   return (
-    <div className=" w-full flex justify-center items-center h-[700px] mt-18 relative overflow-hidden">
+    <div className=" w-full flex justify-center items-center h-screen md:mt-5 tablet:mt-0 relative overflow-hidden">
       <div class="absolute top-[20%] left-[30%] w-[400px] h-[400px] bg-pink-300 dark:bg-red-400 dark:opacity-20 rounded-full blur-3xl opacity-70"></div>
       <div class="absolute top-[20%] right-[20%] w-[450px] h-[450px] bg-purple-300 dark:bg-purple-900 dark:opacity-20  rounded-full blur-3xl opacity-70"></div>
       <div class="absolute bottom-[-10%] right-[45%] w-[350px] h-[350px] bg-blue-300 dark:bg-blue-800 dark:opacity-20 rounded-full blur-3xl opacity-60"></div>
@@ -26,7 +26,7 @@ const Hero = ({ theme }) => {
               <span className="dark:bg-gradient-to-t from-purple-950 via-purple-500 to-purple-500 bg-clip-text dark:text-transparent">
                 Roni
               </span>{" "}
-              <div className="motion-preset-sees">👋</div>
+              <div className="motion-preset-seesaw-lg">👋</div>
             </h1>
             <h1 className="font-bold">
               {" "}
@@ -50,7 +50,7 @@ const Hero = ({ theme }) => {
                 <MdAlternateEmail />
                 Contact
               </button>
-              <button className="cursor-pointer border flex items-center justify-center gap-2 border-gray-200 dark:border-gray-700 duration-100 p-2 shadow-md bg-white hover:bg-gray-100 dark:hover:bg-gray-950 w-35 rounded-lg">
+              <button className="cursor-pointer border flex items-center justify-center gap-2 border-gray-200 dark:border-gray-700 duration-100 p-2 shadow-md bg-white dark:bg-dark-mode hover:bg-gray-100 dark:hover:bg-gray-950 w-35 rounded-lg">
                 <GrProjects />
                 Projects
               </button>
