@@ -26,17 +26,17 @@ const Navbar = ({ theme, lightMode, darkMode }) => {
   return (
     <>
       {dropDownMenu ? (
-        <div className="bg-blue-400 absolute w-full z-50  items-center animate-drop-down">
-          <div className="mt-5 flex flex-col gap-5 items-center p-5">
-            <a>Home</a>
-            <a>Projects</a>
-            <a>Contacts</a>
+        <div className="bg-white border-b border-gray-400 dark:bg-black shadow-xl dark:bg-opacity-50 h-60 absolute w-full z-50  items-center -motion-translate-y-in-100">
+          <div className="mt-5  flex flex-col gap-5 items-center p-5">
+              <button className="hover:bg-gray-100 dark:hover:bg-gray-900 w-full p-2 rounded-lg duration-100">Home</button>
+              <button className="hover:bg-gray-100 dark:hover:bg-gray-900 w-full p-2 rounded-lg duration-100">Contact</button>
+              <button className="hover:bg-gray-100 dark:hover:bg-gray-900 w-full p-2 rounded-lg duration-100">Projects</button>
           </div>
         </div>
       ) : null}
-      <div className="flex justify-center relative w-screen ">
-        <div className="bg-white dark:bg-dark-mode dark:text-white fixed p-4 flex justify-between z-10 container max-w-4xl">
-          <div className="flex gap-5 items-center">
+      <div className="flex justify-center relative w-full ">
+        <div className="bg-white dark:bg-dark-mode dark:text-white fixed p-4 flex md:justify-between  lg:justify-around z-30 border-b-2 border-gray-100 dark:border-gray-800 shadow-md rounded-xl container min-w-full">
+            <div className="flex gap-5 items-center">
             <h1 className="text-2xl font-bold">Logo</h1>
             <ul className="ml-8 items-center gap-5 md:hidden sm:hidden tablet:inline-flex">
               <li>Home</li>
@@ -46,7 +46,7 @@ const Navbar = ({ theme, lightMode, darkMode }) => {
           </div>
           <div className="flex gap-2" ref={themeMenuRef}>
             <button
-              className="border bg-white dark:bg-[#131316] dark:border-gray-800 border-gray-400 shadow-inner  p-2 rounded-lg relative"
+              className="border bg-white dark:bg-[#131316] dark:border-gray-800 border-gray-300 inset-shadow-sm inset-shadow-gray-300 dark:inset-shadow-gray-800 p-2 rounded-lg relative"
               onClick={() => setIsClicked(!isClicked)}
             >
               {theme === "light" ? (
@@ -78,7 +78,7 @@ const Navbar = ({ theme, lightMode, darkMode }) => {
 
             <GiHamburgerMenu
               size={40}
-              className="p-2.5 border rounded-lg tablet:hidden"
+              className=" border tablet:hidden bg-white dark:bg-[#131316] dark:border-gray-800 border-gray-300 inset-shadow-sm inset-shadow-gray-300 dark:inset-shadow-gray-800 p-2 rounded-lg"
               onClick={() => setDropDownMenu(!dropDownMenu)}
             />
           </div>

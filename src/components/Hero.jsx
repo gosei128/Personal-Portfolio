@@ -9,9 +9,9 @@ import { FaLinkedin } from "react-icons/fa";
 const Hero = ({ theme }) => {
   return (
     <div className=" w-full flex justify-center items-center h-screen md:mt-5 tablet:mt-0 relative overflow-hidden">
-      <div class="absolute top-[20%] left-[30%] w-[400px] h-[400px] bg-pink-300 dark:bg-red-400 dark:opacity-20 rounded-full blur-3xl opacity-70"></div>
-      <div class="absolute top-[20%] right-[20%] w-[450px] h-[450px] bg-purple-300 dark:bg-purple-900 dark:opacity-20  rounded-full blur-3xl opacity-70"></div>
-      <div class="absolute bottom-[-10%] right-[45%] w-[350px] h-[350px] bg-blue-300 dark:bg-blue-800 dark:opacity-20 rounded-full blur-3xl opacity-60"></div>
+      <div className="absolute top-[20%] left-[30%] w-[400px] h-[400px] bg-pink-300 dark:bg-red-400 dark:opacity-20 rounded-full blur-3xl opacity-70"></div>
+      <div className="absolute top-[20%] right-[20%] w-[450px] h-[450px] bg-purple-300 dark:bg-purple-900 dark:opacity-20  rounded-full blur-3xl opacity-70"></div>
+      <div className="absolute bottom-[-10%] right-[45%] w-[350px] h-[350px] bg-blue-300 dark:bg-blue-800 dark:opacity-20 rounded-full blur-3xl opacity-60"></div>
 
       <div className=" max-w-4xl w-full tablet:h-[400px] flex flex-wrap gap-2 md:gap-6 relative z-10 p-5">
         <div className=" flex justify-center tablet:items-center w-full gap-8 sm:flex-col tablet:flex-row ">
@@ -20,7 +20,7 @@ const Hero = ({ theme }) => {
             alt=""
             className="md:w-35 tablet:w-40"
           />
-          <div className="md:text-3xl w-full tablet:text-6xl">
+          <div className="md:text-3xl w-full tablet:text-5xl lg:text-6xl">
             <h1 className="md:font-bold tablet:font-extrabold flex">
               Hey, I'm{"\u00A0"}
               <span className="dark:bg-gradient-to-t from-purple-950 via-purple-500 to-purple-500 bg-clip-text dark:text-transparent">

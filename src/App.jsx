@@ -1,7 +1,10 @@
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
+import About from "./components/About";
+import about from "./components/data";
 import useLocalStorage from "./components/hook/useLocalStorage";
-
+import Contact from "./components/Contact";
+import Footer from "./components/Footer";
 function App() {
   const [theme, setTheme] = useLocalStorage(["theme", "dark"]);
 
@@ -28,6 +31,10 @@ function App() {
         <div className="w-full flex flex-col ">
           <Hero theme={theme} />
         </div>
+
+        <About card={about} />
+        <Contact />
+          <Footer />
       </div>
     </div>
   );
