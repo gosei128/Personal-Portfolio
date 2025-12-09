@@ -1,16 +1,143 @@
-# React + Vite
+# My Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, responsive personal portfolio website built with React and Vite. Features a clean design with dark/light theme toggle, showcasing skills, projects, and contact information.
 
-Currently, two official plugins are available:
+## 🚀 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Modern UI/UX Design** - Clean, minimal interface with smooth animations
+- **Dark/Light Theme Toggle** - Persistent theme preference using localStorage
+- **Fully Responsive** - Optimized for all screen sizes (mobile, tablet, desktop)
+- **Interactive Components** - Hero section, About section, Contact form, and Footer
+- **3D Avatar Support** - Theme-aware avatar images
+- **Social Media Integration** - Links to GitHub, LinkedIn, and Upwork
+- **Fast Performance** - Built with Vite for lightning-fast development and builds
 
-## React Compiler
+## 🛠️ Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **React** - UI library
+- **Vite** - Build tool and dev server
+- **Tailwind CSS** - Utility-first CSS framework
+- **React Icons** - Icon library
+- **Styled Components** - CSS-in-JS styling
+- **ESLint** - Code linting
 
-## Expanding the ESLint configuration
+## 📦 Installation
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+1. Clone the repository:
+```bash
+git clone <your-repo-url>
+cd my-portfolio
+```
+
+2. Install dependencies:
+```bash
+npm install
+```
+
+3. Start the development server:
+```bash
+npm run dev
+```
+
+4. Open your browser and navigate to `http://localhost:5173`
+
+## 🎯 Available Scripts
+
+- `npm run dev` - Start the development server
+- `npm run build` - Build for production
+- `npm run preview` - Preview the production build locally
+- `npm run lint` - Run ESLint to check code quality
+
+## 📁 Project Structure
+
+```
+my-portfolio/
+├── public/
+│   └── vite.svg
+├── src/
+│   ├── assets/
+│   │   └── images/
+│   │       ├── 3d-avatar-dark.png
+│   │       ├── 3d-avatar-light.png
+│   │       └── main-bg.jpg
+│   ├── components/
+│   │   ├── hook/
+│   │   │   └── useLocalStorage.jsx
+│   │   ├── About.jsx
+│   │   ├── Contact.jsx
+│   │   ├── data.js
+│   │   ├── Footer.jsx
+│   │   ├── Hero.jsx
+│   │   └── Navbar.jsx
+│   ├── App.jsx
+│   ├── index.css
+│   └── main.jsx
+├── eslint.config.js
+├── index.html
+├── package.json
+├── vite.config.js
+└── README.md
+```
+
+## 🎨 Customization
+
+### Updating Personal Information
+
+1. **Hero Section** (`src/components/Hero.jsx`):
+   - Update the name and title
+   - Modify the introduction text
+   - Add/update social media links
+
+2. **About Section** (`src/components/data.js`):
+   - Edit the `about` array to update your skills, tools, and services
+   - Modify front-end, back-end, and design technologies
+
+3. **Contact Section** (`src/components/Contact.jsx`):
+   - Update contact form fields and functionality
+
+4. **Theme Colors**:
+   - Customize colors in `src/index.css` or Tailwind config
+   - Update gradient colors in component files
+
+### Adding New Sections
+
+1. Create a new component in `src/components/`
+2. Import and add it to `src/App.jsx`
+3. Style using Tailwind CSS classes
+
+## 🌐 Deployment
+
+### Build for Production
+
+```bash
+npm run build
+```
+
+The build output will be in the `dist/` directory, ready to be deployed to any static hosting service.
+
+### Deploy to Vercel
+
+1. Push your code to GitHub
+2. Import your repository on [Vercel](https://vercel.com)
+3. Vercel will automatically detect Vite and configure the build settings
+
+### Deploy to Netlify
+
+1. Push your code to GitHub
+2. Import your repository on [Netlify](https://netlify.com)
+3. Set build command: `npm run build`
+4. Set publish directory: `dist`
+
+## 📝 License
+
+This project is private and personal.
+
+## 👤 Author
+
+**Roni**
+- Front-End Developer
+- Learning full-stack development
+
+---
+
+Built with ❤️ using React and Vite
