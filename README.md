@@ -24,17 +24,20 @@ A modern, responsive personal portfolio website built with React and Vite. Featu
 ## 📦 Installation
 
 1. Clone the repository:
+
 ```bash
 git clone <your-repo-url>
 cd my-portfolio
 ```
 
 2. Install dependencies:
+
 ```bash
 npm install
 ```
 
 3. Start the development server:
+
 ```bash
 npm run dev
 ```
@@ -84,15 +87,18 @@ my-portfolio/
 ### Updating Personal Information
 
 1. **Hero Section** (`src/components/Hero.jsx`):
+
    - Update the name and title
    - Modify the introduction text
    - Add/update social media links
 
 2. **About Section** (`src/components/data.js`):
+
    - Edit the `about` array to update your skills, tools, and services
    - Modify front-end, back-end, and design technologies
 
 3. **Contact Section** (`src/components/Contact.jsx`):
+
    - Update contact form fields and functionality
 
 4. **Theme Colors**:
@@ -118,15 +124,8 @@ The build output will be in the `dist/` directory, ready to be deployed to any s
 ### Deploy to Vercel
 
 1. Push your code to GitHub
-2. Import your repository on [Vercel](https://vercel.com)
+2. Import your repository on [Vercel](https://personal-portfolio-eight-swart.vercel.app/)
 3. Vercel will automatically detect Vite and configure the build settings
-
-### Deploy to Netlify
-
-1. Push your code to GitHub
-2. Import your repository on [Netlify](https://netlify.com)
-3. Set build command: `npm run build`
-4. Set publish directory: `dist`
 
 ## 📝 License
 
@@ -134,9 +133,18 @@ This project is private and personal.
 
 ## 👤 Author
 
-**Roni**
+# Roni Mardani Sore
+
 - Front-End Developer
 - Learning full-stack development
+
+# Contact
+
+- Email: ronisore360@gmail.com
+- Phone: +63 917 123 4567
+- LinkedIn: https://www.linkedin.com/in/roni-mardani-sore
+- GitHub: https://github.com/roni-mardani-sore
+- Upwork: https://freelancerprofilenuxt.mesh.prod.platform.usw2.upwork/freelancers/~015812cdcb051ae449?mp_source=share
 
 ---
 
