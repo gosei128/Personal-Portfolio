@@ -5,6 +5,7 @@ import { GrProjects } from "react-icons/gr";
 import { FaGithub } from "react-icons/fa";
 import { FaSquareUpwork } from "react-icons/fa6";
 import { FaLinkedin } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const Hero = ({ theme }) => {
   return (
@@ -16,7 +17,7 @@ const Hero = ({ theme }) => {
       <div className=" max-w-4xl w-full tablet:h-[400px] flex flex-wrap gap-2 md:gap-6 relative z-10 p-5">
         <div className=" flex justify-center tablet:items-center w-full gap-8 sm:flex-col tablet:flex-row ">
           <img
-            src={theme === "light" ? darkAvatar : lightAvatar}
+            src={theme === "light" ? lightAvatar : darkAvatar}
             alt=""
             className="md:w-35 tablet:w-40"
           />
@@ -52,7 +53,7 @@ const Hero = ({ theme }) => {
               </button>
               <button className="cursor-pointer border flex items-center justify-center gap-2 border-gray-200 dark:border-gray-700 duration-100 p-2 shadow-md bg-white dark:bg-dark-mode hover:bg-gray-100 dark:hover:bg-gray-950 w-35 rounded-lg">
                 <GrProjects />
-                Projects
+                <Link to="/projects"> Projects</Link>
               </button>
             </div>
 
