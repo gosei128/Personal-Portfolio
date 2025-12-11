@@ -7,8 +7,9 @@ const Projects = ({ theme, lightMode, darkMode }) => {
   return (
     <div>
       <Navbar lightMode={lightMode} theme={theme} darkMode={darkMode} />
-
-      <h1>My Projects</h1>
+      <div className="mt-20">
+        <h1>My Projects</h1>
+      </div>
     </div>
   );
 };
