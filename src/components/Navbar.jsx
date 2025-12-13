@@ -75,9 +75,9 @@ const Navbar = ({ theme, lightMode, darkMode }) => {
               onClick={() => setShowTheme(!showTheme)}
             >
               {theme === "light" ? (
-                <MdOutlineDarkMode size={20} />
-              ) : (
                 <MdOutlineLightMode size={20} />
+              ) : (
+                <MdOutlineDarkMode size={20} />
               )}
             </button>
             {/* Drop down theme - keep mounted so fade-out can run */}
