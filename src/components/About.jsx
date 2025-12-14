@@ -1,4 +1,5 @@
 import { GrProjects } from "react-icons/gr";
+import { Link } from "react-router-dom";
 const About = ({
   card,
   title = "Building Digital Experience",
@@ -53,9 +54,12 @@ const About = ({
               )}
             </div>
           ))}
-
         </div>
-          <button className="border self-end w-50 rounded-md p-3 flex items-center border-gray-400 dark:border-gray-800 justify-center gap-2"> <GrProjects /> View Projects</button>
+        <Link to="/projects" className="self-end">
+          <button className="border cursor-pointer w-50 rounded-md p-3 flex flecx items-center border-gray-400 dark:border-gray-800 justify-center gap-2">
+            <GrProjects /> View Projects
+          </button>
+        </Link>
       </div>
     </section>
   );

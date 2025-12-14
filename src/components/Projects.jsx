@@ -2,6 +2,9 @@ import Navbar from "./Navbar";
 import Footer from "./Footer";
 import portfolio from "../assets/images/portfolio-screenshot.png";
 import { useState } from "react";
+import { LuSendHorizontal } from "react-icons/lu";
+import { LuMessageCircleQuestion } from "react-icons/lu";
+
 const Projects = ({ theme, lightMode, darkMode, numCard = 6 }) => {
   const [isHover, setIsHover] = useState(null);
 
@@ -25,7 +28,7 @@ const Projects = ({ theme, lightMode, darkMode, numCard = 6 }) => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 tablet:grid-cols-2 lg:grid-cols-3 w-full gap-4 md:gap-6 mt-12">
+          <div className="grid grid-cols-1 tablet:grid-cols-2 lg:grid-cols-2 w-full gap-4 md:gap-6 mt-12">
             {[...Array(numCard)].map((projectCards, i) => (
               <div
                 onMouseEnter={() => handleHover(i)}
@@ -63,6 +66,18 @@ const Projects = ({ theme, lightMode, darkMode, numCard = 6 }) => {
                 </div>
               </div>
             ))}
+            <div className="self-end flex flex-col p-4 items-center gap-4">
+              {" "}
+              <LuMessageCircleQuestion size={60} />
+              <h1 className="text-xl font-bold">Let's Work Together!</h1>
+              <p className="text-lg">
+                Have a project in mind? Let's talk about it.
+              </p>
+              <button className="cursor-pointer border flex items-center justify-center gap-2 border-gray-200 dark:border-gray-700 shadow-lg p-2 bg-white dark:bg-dark-mode hover:bg-gray-100 dark:hover:bg-gray-950 duration-100 w-35 rounded-lg">
+                <LuSendHorizontal />
+                Contact Me
+              </button>
+            </div>
           </div>
         </div>
       </section>

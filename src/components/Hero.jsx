@@ -51,10 +51,12 @@ const Hero = ({ theme }) => {
                 <MdAlternateEmail />
                 Contact
               </button>
-              <button className="cursor-pointer border flex items-center justify-center gap-2 border-gray-200 dark:border-gray-700 duration-100 p-2 shadow-md bg-white dark:bg-dark-mode hover:bg-gray-100 dark:hover:bg-gray-950 w-35 rounded-lg">
-                <GrProjects />
-                <Link to="/projects"> Projects</Link>
-              </button>
+              <Link to="/projects">
+                <button className="cursor-pointer border flex items-center justify-center gap-2 border-gray-200 dark:border-gray-700 duration-100 p-2 shadow-md bg-white dark:bg-dark-mode hover:bg-gray-100 dark:hover:bg-gray-950 w-35 rounded-lg">
+                  <GrProjects />
+                  Projects
+                </button>
+              </Link>
             </div>
 
             <div className="flex gap-10 items-center">
