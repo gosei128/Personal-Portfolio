@@ -2,7 +2,7 @@ export const about = [
     {
         title :"What I can do",
         desc : " I can help develop solutions that will help you grow your business:",
-        bullets: ["UI/Ux Design", "Front-End Development"]
+        bullets: ["UI/UX Design", "Front-End Development"]
     },
     {
         title :"Tools I Use",
