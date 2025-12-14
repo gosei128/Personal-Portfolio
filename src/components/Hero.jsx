@@ -1,13 +1,24 @@
 import lightAvatar from "../assets/images/3d-avatar-light.png";
 import darkAvatar from "../assets/images/3d-avatar-dark.png";
+import cvFile from "../assets/Roni_CV (2).pdf";
 import { MdAlternateEmail } from "react-icons/md";
 import { GrProjects } from "react-icons/gr";
 import { FaGithub } from "react-icons/fa";
 import { FaSquareUpwork } from "react-icons/fa6";
 import { FaLinkedin } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import { FaRegFilePdf } from "react-icons/fa";
 
 const Hero = ({ theme }) => {
+  const handleDownloadCV = () => {
+    const link = document.createElement("a");
+    link.href = cvFile;
+    link.download = "Roni_CV.pdf";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   return (
     <div className=" w-full flex justify-center items-center h-screen md:mt-5 tablet:mt-0 relative overflow-hidden">
       <div className="absolute top-[20%] left-[30%] w-[400px] h-[400px] bg-pink-300 dark:bg-red-400 dark:opacity-20 rounded-full blur-3xl opacity-70"></div>
@@ -47,9 +58,12 @@ const Hero = ({ theme }) => {
           </p>
           <div className="flex gap-5 md:flex-col tablet:flex-row">
             <div className="flex gap-2 ">
-              <button className="cursor-pointer border flex items-center justify-center gap-2 border-gray-200 dark:border-gray-700 shadow-lg p-2 bg-white dark:bg-dark-mode hover:bg-gray-100 dark:hover:bg-gray-950 duration-100 w-35 rounded-lg">
-                <MdAlternateEmail />
-                Contact
+              <button
+                onClick={handleDownloadCV}
+                className="cursor-pointer border flex items-center justify-center gap-2 border-gray-200 dark:border-gray-700 shadow-lg p-2 bg-white dark:bg-dark-mode hover:bg-gray-100 dark:hover:bg-gray-950 duration-100 w-50 rounded-lg"
+              >
+                <FaRegFilePdf />
+                My Resume
               </button>
               <Link to="/projects">
                 <button className="cursor-pointer border flex items-center justify-center gap-2 border-gray-200 dark:border-gray-700 duration-100 p-2 shadow-md bg-white dark:bg-dark-mode hover:bg-gray-100 dark:hover:bg-gray-950 w-35 rounded-lg">
@@ -61,9 +75,22 @@ const Hero = ({ theme }) => {
 
             <div className="flex gap-10 items-center">
               {"|"}
-              <FaGithub size={25} cursor={"pointer"} />
-              <FaSquareUpwork size={25} cursor={"pointer"} />
-              <FaLinkedin size={25} cursor={"pointer"} />
+              <a
+                href="https://github.com/gosei128"
+                rel="noopener noreferrer"
+                className="cursor-pointer"
+              >
+                <FaGithub size={25} />
+              </a>
+
+              <a
+                href="https://www.linkedin.com/in/roni-sore-0a42b3394/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="cursor-pointer"
+              >
+                <FaLinkedin size={25} />
+              </a>
             </div>
           </div>
         </div>
