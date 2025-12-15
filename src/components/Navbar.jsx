@@ -43,13 +43,9 @@ const Navbar = ({ theme, lightMode, darkMode }) => {
           >
             Home
           </Link>
-          <Link
-            to="/contact"
-            onClick={() => setDropDownMenu(false)}
-            className="block w-full cursor-pointer hover:bg-gray-100 dark:hover.bg-gray-900 p-2 rounded-lg duration-100"
-          >
-            Contact
-          </Link>
+
+          <a href="mailto:ronisore360@gmail.com">Contact </a>
+
           <Link
             to="/projects"
             onClick={() => setDropDownMenu(false)}
@@ -60,7 +56,7 @@ const Navbar = ({ theme, lightMode, darkMode }) => {
         </div>
       </div>
       <div className="flex justify-center relative w-full ">
-        <div className="bg-white dark:bg-dark-mode dark:text-white fixed p-4 flex md:justify-between  lg:justify-around z-30 border-b-2 border-gray-100 dark:border-gray-800 shadow-md rounded-xl container min-w-full">
+        <div className="bg-white dark:bg-dark-mode dark:text-white fixed p-4 tablet:px-20 flex md:justify-between  lg:justify-around z-30 border-b-2 border-gray-100 dark:border-gray-800 shadow-md rounded-xl container min-w-full">
           <div className="flex gap-5 items-center">
             <h1 className="text-2xl font-extrabold dark:dark:bg-gradient-to-t from-purple-950 via-purple-500 to-purple-500 bg-clip-text dark:text-transparent">
               {"<Roni.dev/>"}
@@ -68,7 +64,9 @@ const Navbar = ({ theme, lightMode, darkMode }) => {
             <ul className="ml-8 items-center gap-5 md:hidden sm:hidden tablet:inline-flex">
               <Link to="/">Home</Link>
               <Link to="/projects">Projects</Link>
-              <li>Contact</li>
+              <li>
+                <a href="mailto:ronisore360@gmail.com">Contact</a>
+              </li>
             </ul>
           </div>
           <div className="flex gap-2" ref={themeMenuRef}>
@@ -82,7 +80,7 @@ const Navbar = ({ theme, lightMode, darkMode }) => {
                 <MdOutlineDarkMode size={20} />
               )}
             </button>
-            {/* Drop down theme - keep mounted so fade-out can run */}
+
             <div
               ref={fadeOutRef}
               className={`absolute translate-y-10 -translate-x-23 w-[120px] p-1 border border-gray-300 shadow-lg bg-white dark:bg-[#131316] dark:border-gray-800 rounded-xl transition-opacity duration-200 ${
@@ -102,9 +100,6 @@ const Navbar = ({ theme, lightMode, darkMode }) => {
                 onClick={darkMode}
               >
                 Dark
-              </button>
-              <button className="w-full text-left hover:bg-gray-100 dark:hover:bg-gray-800 p-1 rounded-md">
-                System
               </button>
             </div>
 
