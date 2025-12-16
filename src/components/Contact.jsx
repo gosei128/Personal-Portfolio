@@ -53,6 +53,7 @@ const Contact = () => {
             type="text"
             className="border rounded-md p-2 border-gray-400 dark:border-gray-800 placeholder-zinc-400 dark:placeholder-zinc-400"
             placeholder="Your Name"
+            pattern="[A-Za-z\s]+"
           />
           <label> Email</label>
           <input
@@ -61,6 +62,7 @@ const Contact = () => {
             name="email"
             className="border rounded-md p-2 border-gray-400 dark:border-gray-800 placeholder-zinc-400 dark:placeholder-zinc-400"
             placeholder="contact@example.com"
+            pattern="^[^@\s]+@[^@\s]+\.[^@\s]+$"
           />
           <label>Message</label>
           <textarea
