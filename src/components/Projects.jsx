@@ -1,5 +1,5 @@
-import Navbar from "./Navbar";
-import Footer from "./Footer";
+import Navbar from "./partials/Navbar.jsx";
+import Footer from "./partials/Footer.jsx";
 import portfolio from "../assets/images/portfolio-screenshot.png";
 import { useState } from "react";
 import { LuSendHorizontal } from "react-icons/lu";

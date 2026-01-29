@@ -12,7 +12,7 @@ export const Footer = () => {
                 Roni Mardani Sore <br />
                 <span className="text-lg md:text-sm text-gray-500 font-medium ">
                   {" "}
-                  Based in Philippines
+                  Based in Philippines 
                 </span>
               </h1>
               <p className="text-xl md:text-lg text-gray-700">
@@ -21,7 +21,7 @@ export const Footer = () => {
               </p>
             </div>
             <div className="flex justify-between items-center mt-5 gap-3 flex-wrap">
-              <p>© 2025 Roni. All rights are reserved.</p>
+              <p>© 2026 Roni. All rights are reserved.</p>
               <div className="flex gap-10 ">
                 <a
                   href="https://github.com/gosei128"
