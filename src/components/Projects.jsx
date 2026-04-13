@@ -1,10 +1,9 @@
 import Navbar from "./partials/Navbar.jsx";
 import Footer from "./partials/Footer.jsx";
-import portfolio from "../assets/images/portfolio-screenshot.png";
 import { useState } from "react";
 import { LuSendHorizontal } from "react-icons/lu";
 import { LuMessageCircleQuestion } from "react-icons/lu";
-
+import { projects } from "./data.js";
 const Projects = ({ theme, lightMode, darkMode, numCard = 6 }) => {
   const [isHover, setIsHover] = useState(null);
 
@@ -14,7 +13,6 @@ const Projects = ({ theme, lightMode, darkMode, numCard = 6 }) => {
   const handleMouseLeave = () => {
     setIsHover(null);
   };
-  console.log(isHover);
 
   return (
     <div>
@@ -29,7 +27,7 @@ const Projects = ({ theme, lightMode, darkMode, numCard = 6 }) => {
           </div>
 
           <div className="grid grid-cols-1 tablet:grid-cols-2 lg:grid-cols-2 w-full gap-4 md:gap-6 mt-12">
-            {[...Array(numCard)].map((projectCards, i) => (
+            {projects.map((project, i) => (
               <div
                 onMouseEnter={() => handleHover(i)}
                 onMouseLeave={handleMouseLeave}
@@ -37,8 +35,8 @@ const Projects = ({ theme, lightMode, darkMode, numCard = 6 }) => {
                 className="relative border border-gray-400/60 dark:border-gray-800 bg-white dark:bg-dark-mode rounded-xl overflow-hidden hover:shadow-lg transition-shadow  duration-200"
               >
                 <img
-                  src={portfolio}
-                  alt={`Project ${i + 1}`}
+                  src={project.image}
+                  alt={project.projectName}
                   className={`w-full h-auto object-cover transition-transform duration-300 ease-in-out ${
                     isHover === i ? "scale-110" : "scale-100"
                   }`}
@@ -49,18 +47,25 @@ const Projects = ({ theme, lightMode, darkMode, numCard = 6 }) => {
                   }`}
                 >
                   <div className="">
-                    <h1 className="text-xl font-bold">Project {i + 1}</h1>
-                    <p className="text-sm">Project Description</p>
-                    <div>
-                      <span className="m-1 bg-gray-600 px-3 py-1 rounded-full text-xs">
-                        HTML
-                      </span>
-                      <span className="m-1 bg-gray-600 px-3 py-1 rounded-full text-xs">
-                        Tailwind CSS
-                      </span>
-                      <span className=" m-1 bg-gray-600 px-3 py-1 rounded-full text-xs">
-                        React JS
-                      </span>
+                    <h1 className="text-xl font-bold hover:underline">
+                      <a
+                        href={project.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        {project.projectName}
+                      </a>
+                    </h1>
+                    <p className="text-sm">{project.desc}</p>
+                    <div className="flex gap-2">
+                      {project.tech.map((tech, i) => (
+                        <span
+                          key={i}
+                          className="m-1 bg-gray-600 px-3 py-1 rounded-full text-xs"
+                        >
+                          {tech}
+                        </span>
+                      ))}
                     </div>
                   </div>
                 </div>

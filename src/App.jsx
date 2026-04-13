@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import Navbar from "./components/partials/Navbar.jsx";
 import Hero from "./components/Hero";
 import About from "./components/About";
-import about from "./components/data";
+import { about } from "./components/data";
 import useLocalStorage from "./components/hook/useLocalStorage";
 import Contact from "./components/Contact";
 import Footer from "./components/partials/Footer.jsx";
@@ -28,8 +28,8 @@ function App() {
           exact
           path="/"
           element={
-            <div data-theme={theme} className={`w-screen min-h-screen`}>
-              <div className="  dark:bg-dark-mode dark:text-white w-full min-h-screen overflow-hidden transition-colors flex flex-col">
+            <div data-theme={theme} className={``}>
+              <div className="  dark:bg-dark-mode dark:text-white overflow-y-hidden transition-colors flex flex-col">
                 <Navbar
                   theme={theme}
                   lightMode={handleLightMode}
