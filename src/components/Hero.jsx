@@ -25,7 +25,7 @@ const Hero = ({ theme }) => {
       <div className="absolute top-[20%] right-[20%] w-[450px] h-[450px] bg-purple-300 dark:bg-purple-900 dark:opacity-20  rounded-full blur-3xl opacity-70"></div>
       <div className="absolute bottom-[-10%] right-[45%] w-[350px] h-[350px] bg-blue-300 dark:bg-blue-800 dark:opacity-20 rounded-full blur-3xl opacity-60"></div>
 
-      <div className=" max-w-4xl w-full tablet:h-[400px] flex flex-wrap gap-2 md:gap-6 relative z-10 p-5">
+      <div className=" max-w-5xl w-full tablet:h-[400px] flex flex-wrap gap-2 md:gap-6 relative z-10 p-5">
         <div className=" flex justify-center tablet:items-center w-full gap-8 sm:flex-col tablet:flex-row ">
           <img
             src={theme === "light" ? lightAvatar : darkAvatar}
@@ -33,7 +33,7 @@ const Hero = ({ theme }) => {
             className="md:w-35 tablet:w-40"
           />
           <div className="md:text-3xl w-full tablet:text-5xl lg:text-6xl">
-            <h1 className="md:font-bold tablet:font-extrabold flex">
+            <h1 className="md:font-bold md:leading-normal  tablet:text-5xl lg:text-6xl lg:leading-normal flex">
               Hey, I'm{"\u00A0"}
               <span className="dark:bg-gradient-to-t from-purple-950 via-purple-500 to-purple-500 bg-clip-text dark:text-transparent">
                 Roni
@@ -41,12 +41,10 @@ const Hero = ({ theme }) => {
               <div className="motion-preset-seesaw-lg">👋</div>
             </h1>
             <h1 className="font-bold">
-              {" "}
-              A
-              <strong className=" dark:bg-gradient-to-t from-purple-950 via-purple-500 to-purple-500 bg-clip-text dark:text-transparent">
-                {" "}
-                Front-End Developer{" "}
-              </strong>
+              An Aspiring {" "}
+              <span className=" dark:bg-gradient-to-t from-purple-950 via-purple-500 to-purple-500  dark:text-transparent">
+                 Full-Stack Developer
+              </span>
             </h1>
           </div>
         </div>
@@ -60,13 +58,13 @@ const Hero = ({ theme }) => {
             <div className="flex gap-2 ">
               <button
                 onClick={handleDownloadCV}
-                className="cursor-pointer border flex items-center justify-center gap-2 border-gray-200 dark:border-gray-700 shadow-lg p-2 bg-white dark:bg-dark-mode hover:bg-gray-100 dark:hover:bg-gray-950 duration-100 w-50 rounded-lg"
+                className="cursor-pointer border flex items-center justify-center gap-2 border-slate-300 dark:border-gray-700 p-2 bg-white dark:bg-dark-mode dark:hover:shadow-lg hover:shadow-2xl hover:translate-y-[-2px] duration-100 w-50 rounded-lg"
               >
                 <FaRegFilePdf />
                 My Resume
               </button>
               <Link to="/projects">
-                <button className="cursor-pointer border flex items-center justify-center gap-2 border-gray-200 dark:border-gray-700 duration-100 p-2 shadow-md bg-white dark:bg-dark-mode hover:bg-gray-100 dark:hover:bg-gray-950 w-35 rounded-lg">
+                <button className="cursor-pointer border flex items-center justify-center gap-2 border-slate-300 dark:border-gray-700 duration-100 p-2  bg-white dark:bg-dark-mode dark:hover:shadow-md hover:shadow-2xl hover:translate-y-[-2px] w-35 rounded-lg">
                   <GrProjects />
                   Projects
                 </button>

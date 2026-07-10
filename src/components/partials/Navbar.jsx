@@ -56,9 +56,9 @@ const Navbar = ({ theme, lightMode, darkMode }) => {
         </div>
       </div>
       <div className="flex justify-center relative w-full ">
-        <div className="bg-white dark:bg-dark-mode dark:text-white fixed p-4 tablet:px-20 flex md:justify-between  lg:justify-around z-30 border-b-2 border-gray-100 dark:border-gray-800 shadow-md rounded-xl container min-w-full">
+        <div className="bg-white dark:bg-dark-mode dark:text-white fixed p-4 tablet:px-20 flex md:justify-between  lg:justify-around z-30 border-b-2 border-gray-100 dark:border-gray-800  container min-w-full">
           <div className="flex gap-5 items-center">
-            <h1 className="text-2xl font-extrabold dark:dark:bg-gradient-to-t from-purple-950 via-purple-500 to-purple-500 bg-clip-text dark:text-transparent">
+            <h1 className="text-2xl font-bold dark:dark:bg-gradient-to-t from-purple-950 via-purple-500 to-purple-500 bg-clip-text dark:text-transparent">
               <Link to="/">{"<Roni.dev/>"}</Link>
             </h1>
             <ul className="ml-8 items-center gap-5 md:hidden sm:hidden tablet:inline-flex">

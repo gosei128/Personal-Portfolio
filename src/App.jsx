@@ -8,6 +8,8 @@ import Contact from "./components/Contact";
 import Footer from "./components/partials/Footer.jsx";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Projects from "./components/Projects";
+import PageTransition from "./components/PageTransition";
+import FadeSlideUp from "./components/FadeSlideUp";
 
 function App() {
   const [theme, setTheme] = useLocalStorage("theme", "light");
@@ -28,40 +30,53 @@ function App() {
           exact
           path="/"
           element={
-            <div data-theme={theme} className={``}>
-              <div className="  dark:bg-dark-mode dark:text-white overflow-y-hidden transition-colors flex flex-col">
-                <Navbar
-                  theme={theme}
-                  lightMode={handleLightMode}
-                  darkMode={handleDarkMode}
-                />
+            <PageTransition>
+              <div data-theme={theme} className={``}>
+                <div className="  dark:bg-dark-mode dark:text-white overflow-y-hidden transition-colors flex flex-col">
+                  <Navbar
+                    theme={theme}
+                    lightMode={handleLightMode}
+                    darkMode={handleDarkMode}
+                  />
 
-                <div className="w-full flex flex-col ">
-                  <Hero theme={theme} />
+                  <FadeSlideUp delay={100}>
+                    <div className="w-full flex flex-col">
+                      <Hero theme={theme} />
+                    </div>
+                  </FadeSlideUp>
+
+                  <FadeSlideUp delay={0}>
+                    <About card={about} />
+                  </FadeSlideUp>
+
+                  <FadeSlideUp delay={0}>
+                    <Contact />
+                  </FadeSlideUp>
+
+                  <FadeSlideUp delay={0}>
+                    <Footer />
+                  </FadeSlideUp>
                 </div>
-
-                <About card={about} />
-                <Contact />
-
-                <Footer />
               </div>
-            </div>
+            </PageTransition>
           }
         ></Route>
         <Route
           exact
           path="/projects"
           element={
-            <div data-theme={theme} className={`w-screen min-h-screen`}>
-              <div className="dark:bg-dark-mode dark:text-white w-full min-h-screen transition-colors flex flex-col">
-                <Projects
-                  exact
-                  lightMode={handleLightMode}
-                  darkMode={handleDarkMode}
-                  theme={theme}
-                />
+            <PageTransition>
+              <div data-theme={theme} className={`w-screen min-h-screen`}>
+                <div className="dark:bg-dark-mode dark:text-white w-full min-h-screen transition-colors flex flex-col">
+                  <Projects
+                    exact
+                    lightMode={handleLightMode}
+                    darkMode={handleDarkMode}
+                    theme={theme}
+                  />
+                </div>
               </div>
-            </div>
+            </PageTransition>
           }
         ></Route>
       </Routes>

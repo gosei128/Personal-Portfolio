@@ -1,11 +1,17 @@
 @import "tailwindcss";
 
-@import '@fontsource-variable/roboto';
+
 
 @plugin 'tailwindcss-motion';
-
+@font-face {
+  font-family: "Lexend";
+  src: url("./assets/Fonts/lexend-VariableFont_wght.ttf");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
 body {
-  font-family: 'Roboto Variable', sans-serif;
+  font-family: 'Lexend', sans-serif;
 }
 
 @theme {
@@ -57,8 +63,23 @@ body {
   }
 }
 
+@keyframes slide-up {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to{
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.animate-slide-up {
+  animation: slide-up 0.5s ease-in
+}
+
 .animate-drop-down {
-  animation: drop-down 0.1s ease-in
+  animation: drop-down 0.5s ease-in
 }
 
 .animate-pop-over {
