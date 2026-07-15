@@ -8,9 +8,10 @@ export const about = [
   {
     title: "Tools I Use",
     desc: " I use the latest tools and technologies to build functional and scalable products:",
-    frontEnd: ["Tailwind CSS", "React", "JavaScript", "Typescript", "React Native", "NextJS"],
-    backEnd: ["MongoDB", "Prisma", "SQLite","Express(NodeJS)", "NextJS", "PostgreSQL", "MySQL"],
-    design: ["Figma", "FlutterFlow"],
+    frontEnd: ["Tailwind CSS", "React", "JavaScript", "Typescript", "NextJS", "React Native", "Expo App"],
+    backEnd: ["MongoDB", "Python", "NodeJS","Express", "SQLite", "PostgreSQL", "MySQL"],
+    others: ["Figma", "Git","Github", "Postman"]
+    
   },
   {
     title: "UI/UX Design",

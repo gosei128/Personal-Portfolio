@@ -27,6 +27,7 @@ export const Footer = () => {
                   href="https://github.com/gosei128"
                   rel="noopener noreferrer"
                   className="cursor-pointer"
+                  target="_blank"
                 >
                   <FaGithub size={25} />
                 </a>

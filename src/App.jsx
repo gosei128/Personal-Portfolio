@@ -25,6 +25,11 @@ function App() {
 
   return (
     <Router>
+      <Navbar
+        theme={theme}
+        lightMode={handleLightMode}
+        darkMode={handleDarkMode}
+      />
       <Routes>
         <Route
           exact
@@ -32,13 +37,7 @@ function App() {
           element={
             <PageTransition>
               <div data-theme={theme} className={``}>
-                <div className="  dark:bg-dark-mode dark:text-white overflow-y-hidden transition-colors flex flex-col">
-                  <Navbar
-                    theme={theme}
-                    lightMode={handleLightMode}
-                    darkMode={handleDarkMode}
-                  />
-
+                <div className="dark:bg-dark-mode dark:text-white transition-colors flex flex-col pt-16">
                   <FadeSlideUp delay={100}>
                     <div className="w-full flex flex-col">
                       <Hero theme={theme} />
@@ -67,7 +66,7 @@ function App() {
           element={
             <PageTransition>
               <div data-theme={theme} className={`w-screen min-h-screen`}>
-                <div className="dark:bg-dark-mode dark:text-white w-full min-h-screen transition-colors flex flex-col">
+                <div className="dark:bg-dark-mode dark:text-white w-full min-h-screen transition-colors flex flex-col pt-16">
                   <Projects
                     exact
                     lightMode={handleLightMode}

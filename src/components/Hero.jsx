@@ -42,9 +42,9 @@ const Hero = ({ theme }) => {
             </h1>
             <h1 className="font-bold">
               An Aspiring {" "}
-              <span className=" dark:bg-gradient-to-t from-purple-950 via-purple-500 to-purple-500  dark:text-transparent">
+              <strong className="dark:bg-gradient-to-t from-purple-950 via-purple-500 to-purple-500 bg-clip-text dark:text-transparent">
                  Full-Stack Developer
-              </span>
+              </strong>
             </h1>
           </div>
         </div>

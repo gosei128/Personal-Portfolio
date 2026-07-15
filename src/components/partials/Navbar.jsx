@@ -24,7 +24,7 @@ const Navbar = ({ theme, lightMode, darkMode }) => {
   return (
     <>
       <div
-        className={`bg-white border-b fixed border-gray-400  dark:bg-dark-mode shadow-xl dark:bg-opacity-50 h-fit pb-24 w-full z-50 items-center transition-all duration-200 ease-in-out ${
+        className={`bg-white/90 border-b fixed top-0 border-gray-400 dark:bg-dark-mode shadow-xl dark:bg-opacity-50 backdrop-blur-md h-fit pb-24 w-full z-50 items-center transition-all duration-200 ease-in-out ${
           dropDownMenu
             ? "translate-y-0  pointer-events-auto"
             : "-translate-y-full  pointer-events-none"
@@ -56,7 +56,7 @@ const Navbar = ({ theme, lightMode, darkMode }) => {
         </div>
       </div>
       <div className="flex justify-center relative w-full ">
-        <div className="bg-white dark:bg-dark-mode dark:text-white fixed p-4 tablet:px-20 flex md:justify-between  lg:justify-around z-30 border-b-2 border-gray-100 dark:border-gray-800  container min-w-full">
+        <div className="bg-white/80 dark:bg-dark-mode/80 dark:text-white fixed top-0 p-4 tablet:px-20 flex md:justify-between lg:justify-around z-30 border-b border-gray-100 dark:border-gray-800 backdrop-blur-md container min-w-full">
           <div className="flex gap-5 items-center">
             <h1 className="text-2xl font-bold dark:dark:bg-gradient-to-t from-purple-950 via-purple-500 to-purple-500 bg-clip-text dark:text-transparent">
               <Link to="/">{"<Roni.dev/>"}</Link>

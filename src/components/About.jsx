@@ -20,7 +20,7 @@ const About = ({
               className="border border-gray-400/60 dark:hover:shadow-md hover:shadow-xl hover:translate-y-[-2px] dark:border-gray-800 bg-white dark:bg-dark-mode duration-75 transition-all rounded-xl p-6 w-full lg:w-[500px]"
             >
               <h3 className="text-2xl font-semibold mb-1">{info.title}</h3>
-              <p className="text-sm font-normal text-slate-700 dark:text-slate-400 mb-4">{info.desc}</p>
+              <p className="text-sm font-normal text-gray-500 dark:text-gray-400 mb-4">{info.desc}</p>
 
               {Array.isArray(info.bullets) && info.bullets.length > 0 && (
                 <ul className="list-disc list-inside space-y-2">
@@ -32,7 +32,7 @@ const About = ({
 
               {info.frontEnd && (
                 <div className="mt-3">
-                  <h4 className="font-semibold text-md ">Front-End:</h4>
+                  <h4 className="font-semibold text-md ">Front-End & Mobile:</h4>
                   <p className="text-gray-800 text-sm dark:text-gray-400">{info.frontEnd.join(", ")}</p>
                 </div>
               )}
@@ -44,10 +44,10 @@ const About = ({
                 </div>
               )}
 
-              {info.design && (
+              {info.others && (
                 <div className="mt-3">
-                  <h3 className="font-semibold text-md">Design:</h3>
-                  <p className="text-gray-800 text-sm dark:text-gray-400">{info.design.join(", ")}</p>
+                  <h3 className="font-semibold text-md">Others:</h3>
+                  <p className="text-gray-800 text-sm dark:text-gray-400">{info.others.join(", ")}</p>
                 </div>
               )}
             </div>
