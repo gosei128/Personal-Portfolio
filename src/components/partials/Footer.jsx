@@ -12,7 +12,7 @@ export const Footer = () => {
                 Roni Mardani Sore <br />
                 <span className="text-lg md:text-sm text-gray-500 font-medium ">
                   {" "}
-                  Based in Philippines 
+                  🇵🇭 Based in Philippines 
                 </span>
               </h1>
               <p className="text-xl md:text-lg text-gray-700">

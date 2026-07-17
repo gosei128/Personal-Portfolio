@@ -1,4 +1,5 @@
 import browserExtension from "../assets/images/preview.jpg";
+import qoalaMockup from "../assets/images/qoala-mockup.png";
 export const about = [
   {
     title: "What I can do",
@@ -31,6 +32,12 @@ export const projects = [
     tech: ["HTML", "Tailwind CSS", "React", "Typescript"],
     link: "https://browser-extensions-manager-flax.vercel.app/",
     image: browserExtension,
-  },
+  },{
+    projectName: "Landing Page for Qoala App",
+    desc: "This project is a marketing landing page for Qoala, a mockup for smart queue management system.",
+    tech: ["React", "Tailwind CSS", "Typescript"],
+    link: "https://qoala-mockup-website.vercel.app/",
+    image: qoalaMockup,
+}
 ];
 export default { about, projects };

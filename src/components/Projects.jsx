@@ -16,8 +16,8 @@ const Projects = ({ theme, lightMode, darkMode, numCard = 6 }) => {
 
   return (
     <div>
-      <Navbar lightMode={lightMode} theme={theme} darkMode={darkMode} />
-      <section className="w-full px-6 mt-20">
+      {/* <Navbar lightMode={lightMode} theme={theme} darkMode={darkMode} /> */}
+      <section className="w-full mt-20 pb-8">
         <div className="max-w-5xl mx-auto flex flex-col gap-4">
           <div className="flex flex-col">
             <h1 className="text-3xl md:text-4xl font-extrabold">My Projects</h1>
@@ -26,18 +26,18 @@ const Projects = ({ theme, lightMode, darkMode, numCard = 6 }) => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 tablet:grid-cols-2 lg:grid-cols-2 w-full gap-4 md:gap-6 mt-12">
+          <div className="grid grid-cols-1 tablet:grid-cols-2 lg:grid-cols-2  gap-4 md:gap-6 mt-12">
             {projects.map((project, i) => (
               <div
                 onMouseEnter={() => handleHover(i)}
                 onMouseLeave={handleMouseLeave}
                 key={i}
-                className="relative border border-gray-400/60 dark:border-gray-800 bg-white dark:bg-dark-mode rounded-xl overflow-hidden hover:shadow-lg transition-shadow  duration-200"
+                className="relative h-72 border border-gray-400/60 dark:border-gray-800 bg-white dark:bg-dark-mode rounded-xl overflow-hidden hover:shadow-lg flex justify-center transition-shadow duration-200"
               >
                 <img
                   src={project.image}
                   alt={project.projectName}
-                  className={`w-full h-auto object-cover transition-transform duration-300 ease-in-out ${
+                  className={`absolute bottom-0 inset-0 w-full object-cover transition-transform duration-300 ease-in-out ${
                     isHover === i ? "scale-110" : "scale-100"
                   }`}
                 />
@@ -78,10 +78,14 @@ const Projects = ({ theme, lightMode, darkMode, numCard = 6 }) => {
               <p className="text-lg">
                 Have a project in mind? Let's talk about it.
               </p>
-              <button className="cursor-pointer border flex items-center justify-center gap-2 border-gray-200 dark:border-gray-700 shadow-lg p-2 bg-white dark:bg-dark-mode hover:bg-gray-100 dark:hover:bg-gray-950 duration-100 w-35 rounded-lg">
+              <a href="mailto:ronisore360@gmail.com">
+              <button
+                className="cursor-pointer border flex items-center justify-center gap-2 border-gray-200 dark:border-gray-700 shadow-lg p-2 bg-white dark:bg-dark-mode hover:bg-gray-100 dark:hover:bg-gray-950 duration-100 w-35 rounded-lg"
+              >
                 <LuSendHorizontal />
                 Contact Me
               </button>
+              </a>
             </div>
           </div>
         </div>
