@@ -117,7 +117,7 @@ const Projects = ({ theme, lightMode, darkMode }) => {
                     <img
                       src={project.image}
                       alt={project.projectName}
-                      className="w-full h-full object-contain  transition-transform duration-200 group-hover:scale-105"
+                      className="w-full h-full object-contain transition-transform duration-200 group-hover:scale-105"
                     />
                   </div>
 

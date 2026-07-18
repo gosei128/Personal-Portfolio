@@ -1,6 +1,6 @@
 import lightAvatar from "../assets/images/3d-avatar-light.png";
 import darkAvatar from "../assets/images/3d-avatar-dark.png";
-import cvFile from "../assets/Roni_CV (2).pdf";
+import cvFile from "../assets/Roni-CV-v2.pdf";
 import { MdAlternateEmail } from "react-icons/md";
 import { GrProjects } from "react-icons/gr";
 import { FaGithub } from "react-icons/fa";

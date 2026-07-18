@@ -13,7 +13,7 @@ export const about = [
     title: "Tools I Use",
     desc: " I use the latest tools and technologies to build functional and scalable products:",
     frontEnd: ["Tailwind CSS", "React", "JavaScript", "Typescript", "NextJS", "React Native", "Expo App"],
-    backEnd: ["MongoDB", "Python", "NodeJS","Express", "SQLite", "PostgreSQL", "MySQL"],
+    backEnd: ["MongoDB", "Python", "NodeJS","Express", "NextJS","SQLite", "PostgreSQL", "MySQL"],
     others: ["Figma", "Git","Github", "Postman"]
     
   },
@@ -46,13 +46,13 @@ export const projects = [
   {
     projectName: "Qoala: Web Dashboard",
     desc: "Web dashboard for Qoala App. A Capstone Project for STI College Malolos.",
-    tech: ["React", "Tailwind CSS", "Vite", "Recharts"],
+    tech: ["React", "Tailwind CSS", "Vite", "Recharts", "Socket.io", "PostgreSQL", "Prisma ORM", "Express"],
     link: "https://github.com/gosei128",
     image: webDashboard,
   },{
     projectName: "Qoala: Mobile App",
     desc: "Mobile app for Qoala App. A Capstone Project for STI College Malolos.",
-    tech: ["React Native", "Expo App"],
+    tech: ["React Native","Nativewind", "Expo App", "Socket.io", "PostgreSQL", "Prisma ORM", "Express"],
     link: "https://github.com/gosei128",
     image: mobileApp,
   }
