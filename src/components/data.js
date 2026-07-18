@@ -1,5 +1,8 @@
 import browserExtension from "../assets/images/preview.jpg";
 import qoalaMockup from "../assets/images/qoala-mockup.png";
+import portfolioScreenshot from "../assets/images/portfolio-screenshot.png";
+import webDashboard from "../assets/images/Web-mockup.png";
+import mobileApp from "../assets/images/Mobile-Mockup.png"
 export const about = [
   {
     title: "What I can do",
@@ -27,17 +30,32 @@ export const about = [
 
 export const projects = [
   {
-    projectName: "Browser Extension",
-    desc: "Manage your browser extension with ease.",
-    tech: ["HTML", "Tailwind CSS", "React", "Typescript"],
+    projectName: "Extensions Manager",
+    desc: "Extensions Manager in collection extensions.xl projectves, TypeScript, Web Extensions.",
+    tech: ["React", "TypeScript", "Tailwind CSS"],
     link: "https://browser-extensions-manager-flax.vercel.app/",
     image: browserExtension,
-  },{
-    projectName: "Landing Page for Qoala App",
-    desc: "This project is a marketing landing page for Qoala, a mockup for smart queue management system.",
-    tech: ["React", "Tailwind CSS", "Typescript"],
+  },
+  {
+    projectName: "Qoala App - Landing Page",
+    desc: "Landing page for Qoala App, a smart queue system.",
+    tech: ["Figma", "React", "Tailwind CSS"],
     link: "https://qoala-mockup-website.vercel.app/",
     image: qoalaMockup,
-}
+  },
+  {
+    projectName: "Qoala: Web Dashboard",
+    desc: "Web dashboard for Qoala App. A Capstone Project for STI College Malolos.",
+    tech: ["React", "Tailwind CSS", "Vite", "Recharts"],
+    link: "https://github.com/gosei128",
+    image: webDashboard,
+  },{
+    projectName: "Qoala: Mobile App",
+    desc: "Mobile app for Qoala App. A Capstone Project for STI College Malolos.",
+    tech: ["React Native", "Expo App"],
+    link: "https://github.com/gosei128",
+    image: mobileApp,
+  }
 ];
 export default { about, projects };
+
