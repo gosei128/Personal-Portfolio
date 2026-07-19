@@ -205,7 +205,7 @@ const Projects = ({ theme, lightMode, darkMode }) => {
                   />
                   <button
                     type="submit"
-                    className="w-full py-2 bg-gradient-to-r from-purple-500 to-black hover:from-purple-600 hover:to-pink-600 dark:from-purple-600 dark:to-pink-600 dark:hover:from-purple-500 dark:hover:to-pink-500 text-white font-semibold rounded-lg text-xs transition-all shadow-md shadow-pink-500/10 cursor-pointer active:scale-95 duration-100"
+                    className="w-full py-2 bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 dark:from-purple-600 dark:to-pink-600 dark:hover:from-purple-500 dark:hover:to-pink-500 text-white font-semibold rounded-lg text-xs transition-all shadow-md shadow-pink-500/10 cursor-pointer active:scale-95 duration-100"
                   >
                     Submit
                   </button>
