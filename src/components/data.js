@@ -1,5 +1,5 @@
 import browserExtension from "../assets/images/preview.jpg";
-import qoalaMockup from "../assets/images/qoala-mockup.png";
+import evolvScreenShot from "../assets/images/evolv-screenshot.png";
 import portfolioScreenshot from "../assets/images/portfolio-screenshot.png";
 import webDashboard from "../assets/images/Web-mockup.png";
 import mobileApp from "../assets/images/Mobile-Mockup.png"
@@ -37,11 +37,11 @@ export const projects = [
     image: browserExtension,
   },
   {
-    projectName: "Qoala App - Landing Page",
-    desc: "Landing page for Qoala App, a smart queue system.",
+    projectName: "Qoala Mobile App",
+    desc: "Qoala is a smart queuing system designed to optimize customer flow in various service-based businesses.",
     tech: ["Figma", "React", "Tailwind CSS"],
     link: "https://qoala-mockup-website.vercel.app/",
-    image: qoalaMockup,
+    image: mobileApp,
   },
   {
     projectName: "Qoala: Web Dashboard",
@@ -50,11 +50,11 @@ export const projects = [
     link: "https://github.com/gosei128",
     image: webDashboard,
   },{
-    projectName: "Qoala: Mobile App",
-    desc: "Mobile app for Qoala App. A Capstone Project for STI College Malolos.",
-    tech: ["React Native","Nativewind", "Expo App", "Socket.io", "PostgreSQL", "Prisma ORM", "Express"],
-    link: "https://github.com/gosei128",
-    image: mobileApp,
+    projectName: "Evolv: Gamified Workout Tracker",
+    desc: "Evolv is a passion/for-fun project that I made to help users track their workouts and stay motivated through gamification.",
+    tech: ["React Native","Nativewind", "Expo App", "Drizzle ORM", "SQLite"],
+    link: "https://evolv-gamification.vercel.app/",
+    image: evolvScreenShot,
   }
 ];
 export default { about, projects };

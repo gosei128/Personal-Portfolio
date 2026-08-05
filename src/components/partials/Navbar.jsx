@@ -24,7 +24,7 @@ const Navbar = ({ theme, lightMode, darkMode }) => {
   return (
     <>
       <div
-        className={`bg-white/90 border-b fixed top-0 border-gray-400 dark:bg-dark-mode shadow-xl dark:bg-opacity-50 backdrop-blur-md h-fit pb-24 w-full z-50 items-center transition-all duration-200 ease-in-out ${
+        className={`bg-white/90 border-b fixed top-0 border-gray-300 dark:border-black/90 dark:bg-black/80 shadow-xl dark:bg-opacity-50 backdrop-blur-md h-fit pb-24 w-full z-50 items-center transition-all duration-200 ease-in-out ${
           dropDownMenu
             ? "translate-y-0  pointer-events-auto"
             : "-translate-y-full  pointer-events-none"
@@ -32,24 +32,24 @@ const Navbar = ({ theme, lightMode, darkMode }) => {
       >
         <div className="mt-5 flex flex-col gap-5 items-center text-center p-5">
           <HiOutlineX
-            className="self-end cursor-pointer"
+            className="self-end dark:text-white cursor-pointer"
             size={25}
             onClick={() => setDropDownMenu(false)}
           />
           <Link
             to="/"
             onClick={() => setDropDownMenu(false)}
-            className="block w-full cursor-pointer hover:bg-gray-100 dark:hover:bg-gray-900 p-2 rounded-lg duration-100"
+            className="block w-full cursor-pointer hover:bg-gray-100 dark:text-white dark:hover:bg-gray-900 p-2 rounded-lg duration-100"
           >
             Home
           </Link>
 
-          <a href="mailto:ronisore360@gmail.com">Contact </a>
+          <a href="mailto:ronisore360@gmail.com" className="dark:text-white">Contact </a>
 
           <Link
             to="/projects"
             onClick={() => setDropDownMenu(false)}
-            className="block w-full cursor-pointer hover:bg-gray-100 dark:hover:bg-gray-900 p-2 rounded-lg duration-100"
+            className="block w-full cursor-pointer hover:bg-gray-100 dark:text-white dark:hover:bg-gray-900 p-2 rounded-lg duration-100"
           >
             Projects
           </Link>
@@ -61,7 +61,7 @@ const Navbar = ({ theme, lightMode, darkMode }) => {
             <h1 className="text-2xl font-bold dark:dark:bg-gradient-to-t from-purple-950 via-purple-500 to-purple-500 bg-clip-text dark:text-transparent">
               <Link to="/">{"<Roni.dev/>"}</Link>
             </h1>
-            <ul className="ml-8 items-center gap-5 md:hidden sm:hidden tablet:inline-flex">
+            <ul className=" tablet:ml-8 items-center gap-5 md-extra:inline-flex sm:hidden">
               <Link to="/">Home</Link>
               <Link to="/projects">Projects</Link>
               <li>
@@ -71,7 +71,7 @@ const Navbar = ({ theme, lightMode, darkMode }) => {
           </div>
           <div className="flex gap-2" ref={themeMenuRef}>
             <button
-              className="border bg-white dark:bg-[#131316] dark:border-gray-800 border-gray-300 inset-shadow-sm inset-shadow-gray-300 dark:inset-shadow-gray-800 p-2 rounded-lg relative"
+              className="border bg-white dark:bg-dark-mode dark:border-gray-800 border-gray-300 inset-shadow-sm inset-shadow-gray-300 dark:inset-shadow-gray-800 p-2 rounded-lg relative"
               onClick={() => setShowTheme(!showTheme)}
             >
               {theme === "light" ? (
@@ -105,7 +105,7 @@ const Navbar = ({ theme, lightMode, darkMode }) => {
 
             <GiHamburgerMenu
               size={40}
-              className=" border tablet:hidden bg-white dark:bg-[#131316] dark:border-gray-800 border-gray-300 inset-shadow-sm inset-shadow-gray-300 dark:inset-shadow-gray-800 p-2 rounded-lg"
+              className=" border md-extra:hidden bg-white dark:bg-dark-mode dark:border-gray-800 border-gray-300 inset-shadow-sm inset-shadow-gray-300 dark:inset-shadow-gray-800 p-2 rounded-lg"
               onClick={() => setDropDownMenu(!dropDownMenu)}
             />
           </div>

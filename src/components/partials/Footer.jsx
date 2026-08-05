@@ -15,7 +15,7 @@ export const Footer = () => {
                   🇵🇭 Based in Philippines 
                 </span>
               </h1>
-              <p className="text-xs md:text-sm tablet:text-xl text-gray-700">
+              <p className="text-xs md:text-sm tablet:text-lg text-gray-700">
                 Website Designed in Figma. Built with React.js <br /> and
                 Tailwind CSS.
               </p>

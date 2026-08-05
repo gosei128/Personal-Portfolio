@@ -6,10 +6,27 @@ import { about } from "./components/data";
 import useLocalStorage from "./components/hook/useLocalStorage";
 import Contact from "./components/Contact";
 import Footer from "./components/partials/Footer.jsx";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes, useLocation } from "react-router-dom";
 import Projects from "./components/Projects";
 import PageTransition from "./components/PageTransition";
 import FadeSlideUp from "./components/FadeSlideUp";
+import { ReactLenis, useLenis } from "lenis/react";
+import "lenis/dist/lenis.css";
+
+function ScrollToTop() {
+  const { pathname } = useLocation();
+  const lenis = useLenis();
+
+  useEffect(() => {
+    if (lenis) {
+      lenis.scrollTo(0, { immediate: true });
+    } else {
+      window.scrollTo(0, 0);
+    }
+  }, [pathname, lenis]);
+
+  return null;
+}
 
 function App() {
   const [theme, setTheme] = useLocalStorage("theme", "light");
@@ -24,62 +41,65 @@ function App() {
   const handleDarkMode = () => setTheme("dark");
 
   return (
-    <Router>
-      <Navbar
-        theme={theme}
-        lightMode={handleLightMode}
-        darkMode={handleDarkMode}
-      />
-      <Routes>
-        <Route
-          exact
-          path="/"
-          element={
-            <PageTransition>
-              <div data-theme={theme} className={``}>
-                <div className="dark:bg-dark-mode dark:text-white transition-colors flex flex-col pt-16">
-                  <FadeSlideUp delay={100}>
-                    <div className="w-full flex flex-col">
-                      <Hero theme={theme} />
-                    </div>
-                  </FadeSlideUp>
+    <ReactLenis root options={{ lerp: 0.1, duration: 1.2, smoothWheel: true }}>
+      <Router>
+        <ScrollToTop />
+        <Navbar
+          theme={theme}
+          lightMode={handleLightMode}
+          darkMode={handleDarkMode}
+        />
+        <Routes>
+          <Route
+            exact
+            path="/"
+            element={
+              <PageTransition>
+                <div data-theme={theme} className={`overflow-hidden`}>
+                  <div className="dark:bg-dark-mode dark:text-white transition-colors flex flex-col pt-16">
+                    <FadeSlideUp delay={100}>
+                      <div className="w-full flex flex-col">
+                        <Hero theme={theme} />
+                      </div>
+                    </FadeSlideUp>
 
-                  <FadeSlideUp delay={0}>
-                    <About card={about} />
-                  </FadeSlideUp>
+                    <FadeSlideUp delay={0}>
+                      <About card={about} />
+                    </FadeSlideUp>
 
-                  <FadeSlideUp delay={0}>
-                    <Contact />
-                  </FadeSlideUp>
+                    <FadeSlideUp delay={0}>
+                      <Contact />
+                    </FadeSlideUp>
 
-                  <FadeSlideUp delay={0}>
-                    <Footer />
-                  </FadeSlideUp>
+                    <FadeSlideUp delay={0}>
+                      <Footer />
+                    </FadeSlideUp>
+                  </div>
                 </div>
-              </div>
-            </PageTransition>
-          }
-        ></Route>
-        <Route
-          exact
-          path="/projects"
-          element={
-            <PageTransition>
-              <div data-theme={theme} className={`w-screen min-h-screen`}>
-                <div className="dark:bg-dark-mode dark:text-white w-full min-h-screen transition-colors flex flex-col pt-16">
-                  <Projects
-                    exact
-                    lightMode={handleLightMode}
-                    darkMode={handleDarkMode}
-                    theme={theme}
-                  />
+              </PageTransition>
+            }
+          ></Route>
+          <Route
+            exact
+            path="/projects"
+            element={
+              <PageTransition>
+                <div data-theme={theme} className={`w-screen min-h-screen`}>
+                  <div className="dark:bg-dark-mode dark:text-white w-full min-h-screen transition-colors flex flex-col pt-16">
+                    <Projects
+                      exact
+                      lightMode={handleLightMode}
+                      darkMode={handleDarkMode}
+                      theme={theme}
+                    />
+                  </div>
                 </div>
-              </div>
-            </PageTransition>
-          }
-        ></Route>
-      </Routes>
-    </Router>
+              </PageTransition>
+            }
+          ></Route>
+        </Routes>
+      </Router>
+    </ReactLenis>
   );
 }
 
