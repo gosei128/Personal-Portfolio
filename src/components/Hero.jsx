@@ -21,9 +21,9 @@ const Hero = ({ theme }) => {
 
   return (
     <div className=" w-full flex justify-center items-center h-screen md:mt-5 tablet:mt-0 relative overflow-hidden">
-      <div className="absolute top-[15%] left-[25%] w-[400px] h-[400px] bg-pink-300 dark:bg-red-400 dark:opacity-20 rounded-full blur-3xl opacity-70"></div>
-      <div className="absolute top-[20%] right-[20%] w-[450px] h-[450px] bg-purple-300 dark:bg-purple-900 dark:opacity-20  rounded-full blur-3xl opacity-70"></div>
-      <div className="absolute bottom-[-10%] right-[45%] w-[350px] h-[350px] bg-blue-300 dark:bg-blue-800 dark:opacity-20 rounded-full blur-3xl opacity-60"></div>
+      <div className="absolute top-[15%] left-1/5 w-1/4 h-1/4 bg-pink-300 dark:bg-red-400 dark:opacity-20 rounded-full blur-[90px] lg:blur-[150px] lg:opacity-70"></div>
+      <div className="absolute top-[20%] right-[20%] w-1/4 h-1/4 bg-purple-300 dark:bg-purple-900 dark:opacity-20  rounded-full blur-[90px] opacity-70 lg:blur-[150px] lg:opacity-60"></div>
+      <div className="absolute bottom-1/4 right-[45%] w-1/4 h-1/4 bg-blue-300 dark:bg-blue-800 dark:opacity-20 rounded-full blur-[90px] opacity-60 lg:blur-[150px] lg:opacity-50"></div>
 
       <div className=" max-w-5xl w-full tablet:h-[400px] flex flex-wrap gap-2 md:gap-6 relative z-10 p-5">
         <div className=" flex justify-center tablet:items-center w-full gap-8 sm:flex-col tablet:flex-row ">
@@ -41,9 +41,9 @@ const Hero = ({ theme }) => {
               <div className="motion-preset-seesaw-lg">👋</div>
             </h1>
             <h1 className="font-bold">
-              An Aspiring {" "}
+              An Aspiring{" "}
               <strong className="dark:bg-gradient-to-t from-purple-950 via-purple-500 to-purple-500 bg-clip-text dark:text-transparent">
-                 Full-Stack Developer
+                Full-Stack Developer
               </strong>
             </h1>
           </div>
@@ -51,9 +51,9 @@ const Hero = ({ theme }) => {
         {/* CTA Section */}
         <div className="flex flex-col w-full gap-6 ">
           <p className="text-xl ">
-            Currently a 4th year student
-            learning <strong>full-stack </strong> one project at a time -
-            blending clean <strong>design </strong> with solid functionality.
+            Currently a 4th year student learning <strong>full-stack </strong>{" "}
+            one project at a time - blending clean <strong>design </strong> with
+            solid functionality.
           </p>
           <div className="flex gap-5 md:flex-col tablet:flex-row">
             <div className="flex gap-2 ">
